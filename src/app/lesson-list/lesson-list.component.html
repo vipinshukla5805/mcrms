@@ -1,0 +1,30 @@
+
+      <div>From: lesson-list</div>
+      <!--<table class="lessons-list card card-strong">
+        <tr *ngFor="let lesson of lessons">
+          <td>
+            <img src="https://material.angularjs.org/latest/img/icons/angular-logo.svg" alt="" class="lesson-logo">
+          </td>
+          <td>
+            Hi
+          </td>
+        </tr>
+      </table>-->
+      <!--<input class="add-lesson" placeholder="Add description" (keyup.enter)="dataService.createSpeaker(input.value)" #input>-->
+      <section>
+          <section *ngIf="isLoading && !errorMessage">
+          Loading our hyperdrives!!! Retrieving data...
+          </section>
+            <ul>
+              <!-- this is the new syntax for ng-repeat -->
+              <li *ngFor="let person of people">
+                {{person.name}}
+              </li>
+            </ul>
+            <section *ngIf="errorMessage">
+              {{errorMessage}}
+            </section>
+        </section>
+
+
+
